@@ -1,17 +1,21 @@
-# CodePractice - Web App (v1)
+# practice-seth - Web App (v1)
 
-CodePractice is a web-based platform aimed at helping developers practice coding questions and improve their skills. The first iteration focuses solely on **code-based practice** with assistance powered by the **Gemini API**.
+**practice-seth** is a web-based learning platform designed to help users improve their skills through structured practice. The first iteration focuses on **coding practice**, with AI-powered feedback provided by the **Gemini API**.
 
-This project is structured with a **Next.js frontend** and a **Spring Boot backend**, designed to support a future transition into a microservice-based architecture.
+This version includes a guided flow: select a topic → choose practice type → solve problems in an editor → get AI feedback.
 
 ---
 
 ## 🚀 Features (v1)
 
-- Browse and select coding problems
-- Submit code to get AI-generated feedback (via Gemini API)
-- Simple, minimal UI (no login/signup required)
-- API-first architecture to support future features
+- Select a **topic** (e.g., Coding)
+- Choose between **Theory** or **Code Practice**
+- For Code Practice:
+  - View coding problem
+  - Solve it in an in-browser code editor
+  - Choose difficulty level (shown in sidebar)
+  - Click **Review Code** to get AI feedback
+  - Click **Execute Code** (optional placeholder)
 
 ---
 
@@ -19,68 +23,68 @@ This project is structured with a **Next.js frontend** and a **Spring Boot backe
 
 | Layer     | Technology   |
 |-----------|--------------|
-| Frontend  | Next.js (React, deployed on Vercel) |
+| Frontend  | Next.js (deployed on Vercel) |
 | Backend   | Spring Boot (REST APIs, deployed independently) |
 | AI Assist | Gemini API |
-| Database  | None (Static data/in-memory for now) |
+| Database  | None (Static/dummy data used for now) |
 
 ---
 
 ## 🗂️ Project Structure
 
-/frontend-codepractice  
-  └── pages/  
-  └── components/  
-  └── utils/  
-  └── public/  
-  └── ...
-
-/backend-codepractice  
-  └── src/  
-    └── main/  
-      └── java/  
-      └── resources/  
-    └── ...
+```
+/frontend-practice-seth
+├── pages/
+├── components/
+├── utils/
+├── public/
+/backend-practice-seth
+└── src/
+└── main/
+├── java/
+└── resources/
+```
 
 ---
 
 ## 🔌 API Integration
 
-- Backend integrates with **Gemini API** to provide:
- - Code hints  
- - Explanations  
- - Suggestions or bug help  
-- Frontend communicates with backend via REST API endpoints.
+- The backend integrates with **Gemini API** to provide:
+  - Code reviews
+  - Suggestions or improvements
+- The frontend interacts with the backend through REST APIs.
 
 ---
 
 ## ⚙️ How to Run (Locally)
 
 ### Frontend (Next.js)
-```
-cd frontend-codepractice
+```bash
+cd frontend-practice-seth
 npm install
 npm run dev
 ```
 
 ### Backend (Spring Boot)
-
-```
-cd backend-codepractice
+```bash
+cd backend-practice-seth
 ./mvnw spring-boot:run
 ```
 
----
-
 ## 🛠️ Planned Enhancements (Post v1)
 
-- User authentication (email/password, OAuth)
-- Code execution via Judge0 or similar APIs
-- Support for MCQs, Math, Essay Writing
-- Admin dashboard for adding/updating content
-- MongoDB/PostgreSQL integration
-- Microservices (Python/Java) for scalable backend
+    Code execution via Judge0 or similar service
 
----
+    User authentication (email/password, OAuth)
 
-## 📌 Author & License
+    Additional content types: MCQs, Essay Writing, Math, etc.
+
+    Admin panel for content management
+
+    Persistent storage with MongoDB or PostgreSQL
+
+    Microservices for language-specific backends (Java, Python, etc.)
+
+
+
+
